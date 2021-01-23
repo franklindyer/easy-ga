@@ -1,0 +1,2 @@
+- Maybe it would be a good idea to have a separate Genome class for performing gene analytics, crossover operations, etc, rather than just storing everything in Organism?
+- Gene values are always integers. If you want to have a GA that uses continuous gene values, you can just approximate it by using a large number of possible integers and then normalizing them to smaller fractional values.
