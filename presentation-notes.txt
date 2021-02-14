@@ -1,0 +1,21 @@
+- What is a genetic algorithm?
+    - Computer process that simulates the biological processes of evolution and natural selection
+    - Flow chart: spawning -> evaluation -> selection -> reproduction -> mutation -> back to evaluation
+- Why do we care about genetic algorithms? (two main reasons)
+    - 1. They allow us to solve difficult optimization problems without understanding them completely
+        - Applications in school timetabling, bank lending decisions, robot path planning, jet engine turbines (Wikipedia example: thermodynamically optimal antenna?)
+    - 2. They help us learn about evolution and conduct experiments with it that are difficult to execute on real biological organisms
+        - Evolution is slow, but computers speed it up for us
+        - Shed light on the nature of intelligence (GAs + NNs are often used together)
+- Parameters in genetic algorithms
+    - Population size: larger population is conducive to diversity, which helps the GA find solutions quickly
+    - Mutation probability: high mutation rate is conducive to diversity and helps find solutions, but it can also mess up solutions and bring down overall fitness
+    - Crossover operation: impacts overall diversity
+    - Selectivity/selection mechanism
+- Some of my research with GAs
+    - Melanie Mitchell's book "Complexity" and the soda-can collection problem
+    - Research project: comparison of crossover operators, found that those which could produce more possible combinations tended to yield better results
+    - Environmental crossfitness and funny GIFs of organisms screwing up in the wrong environment
+        - Comparison to invasive species?
+- Refer to my Python framework for experimenting with GAs easily
+    - Quick test-run/demo/crash course?
