@@ -24,7 +24,7 @@ class TrivialGame(Game):
 
 class DotProdGame(Game):
 
-        def __init__(self, length=30, target=15):
+        def __init__(self, length=30, target=0):
 
             super().__init__()
 

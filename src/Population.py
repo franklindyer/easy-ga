@@ -11,11 +11,13 @@ class Population:
         self.generation = 0
 
         ## Default settings:
-        self.game = DotProdGame(genome_length, genome_length/2)
+        self.game = TrivialGame()
         self.num_trials = 20
         self.selectivity = 0.5
         self.num_parents = 2
         self.mutate_prob = 0.02
+        self.crossover_op = "UX"
+        self.crossover_param = 0
 
         ## Data collection settings:
         self.log = True
@@ -43,7 +45,7 @@ class Population:
         new_genomes = []
         for i in range(self.size):
             parents = np.random.choice(self.gene_pool, size=self.num_parents, replace=False)
-            child_genome = Genome.reproduce(parents)
+            child_genome = Genome.reproduce(parents, crossover_op=self.crossover_op, param=self.crossover_param)
             child_genome.mutate(self.mutate_prob)
             new_genomes.append(child_genome)
 
@@ -75,3 +77,5 @@ class Population:
         data_smooth = [sum(data[i:i+2*smoothness+1])/(2*smoothness+1) for i in gens_smooth]
 
         plt.plot(gens_smooth, data_smooth, **kwargs)
+        plt.xlabel("Number of generations")
+        plt.ylabel("Average fitness")

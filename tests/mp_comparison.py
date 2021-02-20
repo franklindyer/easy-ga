@@ -24,7 +24,6 @@ for i in range(num_mps):
     mp_str = str(mut_probs[i])
     p.plot_gens(stat="avg",smoothness=3,color=color,linewidth=2,label=mp_str,alpha=0.5)
 
-plt.xlabel("Number of generations")
-plt.ylabel("Average fitness")
-plt.legend(loc="lower right", title="Mutation probability")
+plt.legend(loc="upper left", title="Mutation probability")
+
 plt.show()

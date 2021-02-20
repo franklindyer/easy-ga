@@ -24,8 +24,6 @@ for i in range(num_sizes):
     size_str = str(pop_sizes[i])
     p.plot_gens(stat="avg",smoothness=3,color=color,linewidth=2,label=size_str,alpha=0.5)
     
-plt.xlabel("Number of generations")
-plt.ylabel("Average fitness")
 plt.legend(loc="lower right", title="Population size")
 
 plt.show()
